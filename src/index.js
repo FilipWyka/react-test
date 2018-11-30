@@ -29,7 +29,9 @@ class Board extends React.Component {
   }
 
   handleClick(i) {
-    alert('asdfasd')
+    const squares = this.state.squares.slice();
+    squares[i] = 'X';
+    this.setState({squares: squares});
   }
 
   renderSquare(i) {
